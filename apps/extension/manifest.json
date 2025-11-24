@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "LinkNest 书签同步助手",
+  "version": "0.1.1",
+  "description": "自动将浏览器书签同步到 LinkNest 账号，支持全量同步与实时监听。",
+  "permissions": ["bookmarks", "storage"],
+  "host_permissions": ["http://localhost:4000/*"],
+  "background": { "service_worker": "background.js" },
+  "options_page": "options.html"
+}

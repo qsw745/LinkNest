@@ -1,0 +1,21 @@
+{
+  "name": "link-nest",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "yarn@4.4.1",
+  "workspaces": [
+    "apps/*"
+  ],
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "yarn dev:web",
+    "dev:all": "yarn dev:api & yarn dev:web",
+    "dev:api": "yarn workspace @linknest/api dev",
+    "dev:web": "yarn workspace @linknest/web dev",
+    "build": "yarn workspace @linknest/web build && yarn workspace @linknest/api build",
+    "lint": "yarn workspaces run lint",
+    "type-check": "yarn workspaces run type-check"
+  }
+}
