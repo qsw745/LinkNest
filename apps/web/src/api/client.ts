@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-const apiBase = import.meta.env.VITE_API_BASE_URL || 'http://localhost:4000/api'
+// Use relative path by default so dev-server proxy works for LAN access.
+const apiBase = import.meta.env.VITE_API_BASE_URL || '/api'
 
 const api = axios.create({
   baseURL: apiBase,
