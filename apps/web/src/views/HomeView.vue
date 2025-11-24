@@ -176,9 +176,10 @@ const copyPublicLink = async (id: number) => {
           <div class="eyebrow">书签同步 · 在线中心</div>
           <h2>把分散的书签收拢到一个家</h2>
           <p>扩展自动监听新增/修改/删除，前端即可搜索与管理。</p>
-          <a-space>
+          <a-space wrap>
             <a-button type="primary" size="large" @click="loadData">刷新列表</a-button>
             <a-button size="large" @click="addModalOpen = true">快速新增</a-button>
+            <a-button size="large" href="/extension.zip" download>下载浏览器扩展</a-button>
           </a-space>
         </div>
         <div class="hero-meta">
