@@ -25,6 +25,7 @@ app.use((err: Error, _req: express.Request, res: express.Response, _next: expres
   res.status(500).json({ message: 'Internal server error' })
 })
 
-app.listen(env.port, () => {
-  console.log(`API server listening on http://localhost:${env.port}`)
+app.listen(env.port, env.host, () => {
+  const hostLabel = env.host === '0.0.0.0' ? 'localhost or LAN IP' : env.host
+  console.log(`API server listening on http://${hostLabel}:${env.port}`)
 })
